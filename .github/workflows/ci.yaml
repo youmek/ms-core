@@ -93,12 +93,12 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  deploy:
-    name: auto-deploy
-    needs: auto-release
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger RENDER deployment
-        run: |
-          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+  # deploy:
+  #   name: auto-deploy
+  #   needs: auto-release
+  #   if: github.ref == 'refs/heads/main'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Trigger RENDER deployment
+  #       run: |
+  #         curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
