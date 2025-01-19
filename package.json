@@ -1,6 +1,6 @@
 {
   "name": "core-ms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Core microservice for Main app logic.",
   "main": "src/main.ts",
   "scripts": {
